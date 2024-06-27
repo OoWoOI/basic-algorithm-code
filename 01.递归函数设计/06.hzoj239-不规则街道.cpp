@@ -1,15 +1,10 @@
 /*************************************************************************
-	> File Name: 03.hzoj235_递归实现指数型枚举.cpp
+	> File Name: 06.hzoj239-不规则街道.cpp
 	> Author: 
 	> Mail: 
-	> Created Time: Wed 26 Jun 2024 03:56:11 PM CST
+	> Created Time: Fri 28 Jun 2024 12:33:27 AM CST
  ************************************************************************/
 
 #include<iostream>
 using namespace std;
-int main() {
-    
-    
-    
-    return 0;
-}
+
