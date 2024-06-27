@@ -5,11 +5,17 @@
 
 //TODO: 《递归函数设计技巧》blog && 习题代码目录结构
 
-[路飞吃桃](https://github.com/OoWoOI/basic-algorithm-code/blob/main/01.%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E8%AE%BE%E8%AE%A1/01.hzoj184_%E8%B7%AF%E9%A3%9E%E5%90%83%E6%A1%83.cpp)
+[路飞吃桃](01.递归函数设计/01.hzoj184_路飞吃桃.cpp)
 
-[弹簧板](https://github.com/OoWoOI/basic-algorithm-code/blob/main/01.%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E8%AE%BE%E8%AE%A1/02.hzoj186_%E5%BC%B9%E7%B0%A7%E7%89%88.cpp)
+[弹簧板](01.递归函数设计/02.hzoj186_弹簧板.cpp)
 
+[递归实现指数型枚举](01.递归函数设计/03.hzoj235-递归实现指数型枚举.cpp)
 
+[递归实现组合型枚举](01.递归函数设计/04.hzoj236-递归实现组合型枚举.cpp)
+
+[递归实现排列型枚举](01.递归函数设计/05.hzoj237-递归实现排列型枚举.cpp)
+
+[不规则街道](01.递归函数设计/03.hzoj239-不规则街道.cpp)
 
 ## 第2章：顺序表与链表
 
