@@ -5,6 +5,10 @@
 
 //TODO: 《递归函数设计技巧》blog && 习题代码目录结构
 
+<a href="https://github.com/OoWoOI/basic-algorithm-code/blob/main/01.%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E8%AE%BE%E8%AE%A1/01.hzoj184_%E8%B7%AF%E9%A3%9E%E5%90%83%E6%A1%83.cpp">
+路飞吃桃
+</a>
+
 ## 第2章：顺序表与链表
 
 //TODO：《顺序表与链表》blog && 代码文件与目录结构
