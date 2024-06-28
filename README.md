@@ -29,7 +29,27 @@
 
 ## 第2章：顺序表与链表
 
-//TODO：《顺序表与链表》blog && 代码文件与目录结构
+### 学习笔记：顺序表与链表
+[《顺序表与链表学习笔记》](https://blog.csdn.net/qq_53652592/article/details/140055591?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22140055591%22%2C%22source%22%3A%22qq_53652592%22%7D)
+
+[顺序表代码实现](02.顺序表与链表/01.vector.cpp)
+
+[链表代码实现](02.顺序表与链表/02.linklist.cpp)
+### 相关习题代码
+
+[leetcode206-反转链表](02.顺序表与链表/03.leetcode206-反转链表.cpp)
+
+[leetcode141-环形链表](02.顺序表与链表/04.leetcode141-环形链表.cpp)
+
+[leetcode202-快乐数](02.顺序表与链表/05.leetcode202-快乐数.cpp)
+
+[leetcode61-旋转链表](02.顺序表与链表/06.leetcode61-旋转链表.cpp)
+
+[leetcode19-删除倒数第N个结点](02.顺序表与链表/07.leetcode19-删除倒数第N个结点.cpp)
+
+[leetcode142-环形链表II](02.顺序表与链表/08.leetcode142-环形链表II.cpp)
+
+[leetcode92-反转链表II](02.顺序表与链表/09.leetcode92-反转链表II.cpp)
 
 ## 第3章：栈和队列
 
