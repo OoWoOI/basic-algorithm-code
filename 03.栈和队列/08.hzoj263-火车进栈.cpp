@@ -1,40 +1,47 @@
-/*************************************************************************
-	> File Name: 08.hzoj263-火车进栈.cpp
-	> Author: 
-	> Mail: 
-	> Created Time: Mon 01 Jul 2024 09:47:22 PM CST
- ************************************************************************/
-
 #include<iostream>
+#include<vector>
 #include<stack>
+#include<algorithm>
+
 using namespace std;
 
-#define MAX_N 20
-int f[MAX_N + 5] = {0};
-int cnt, n;
 
-void print_one_ret() {
+bool is_valid(vector<int> &num) {
     
-    return ;
-}
+    stack<int> stk;
+    int p = 1;
+    for (int i = 0; i < num.size(); i++) {
+        while (p <= num[i]) {
+            stk.push(p);
+            p++;
+        }
 
-void func(int a, int n) {
-    if (i == n + 1) {
-        print_one_ret();
-        return ;
+        if (!stk.empty() && stk.top() == num[i]) {
+            stk.pop();
+        }
     }
     
-    for (int i = a; i <= n; i++) {
-           
-    }
-    return ;
+    return stk.empty();
 }
 
 int main() {
+    int n;
 
     cin >> n;
+    vector<int> num(n);
+    for (int i = 0; i < n; i++) num[i] = i + 1;
 
-    func(0, n);
+    int cnt = 0;
+    do {
+        if (is_valid(num)) {
+            for (auto x : num) {
+                cout << x;
+            }
+            cout << endl;
+            cnt++;
+        }
+    } while (next_permutation(num.begin(), num.end()) && cnt < 20);
     
+
     return 0;
 }
