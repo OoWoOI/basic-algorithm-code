@@ -10,20 +10,45 @@
 #include"00.sort_test.h"
 
 void insert_sort(int *arr, int l, int r) {
-    //TODO : 完成插入排序算法的代码
+    
+    for (int i = l + 1; i < r; i++) {
+        int ind = i;
+        while (l < ind && arr[ind - 1] > arr[ind]) {
+            SWAP(arr[ind], arr[ind - 1]);
+            ind -= 1;
+        }
+    }
     return ;
 }
 
-
 void unguarded_insert_sort(int *arr, int l, int r) {
-    //TODO : 完成无监督的插入排序算法的代码
-
+    int ind = l;
+    //找到最小值元素
+    for (int i = l + 1; i < r; i++) {
+        if (arr[i] < arr[ind]) ind = i;
+    }
+    //将最小值元素移动到首位
+    while (l < ind) {
+        SWAP(arr[ind], arr[ind - 1]);
+        ind -= 1;
+    }
+    //插入排序
+    for (int i = l + 1; i < r; i++) {
+        int ind = i;
+        while (arr[ind] < arr[ind - 1]) {
+            SWAP(arr[ind], arr[ind - 1]);
+            ind -= 1;
+        }
+    }
     return ;
 }
 
 
 
 int main() {
-      
+    int *arr = getRandomArr(BIG_DATA_NUM);
+    TEST(insert_sort, arr, BIG_DATA_NUM);
+    TEST(unguarded_insert_sort, arr, BIG_DATA_NUM);
+    
     return 0;
 }
