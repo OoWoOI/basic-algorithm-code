@@ -10,10 +10,9 @@
 #include"00.sort_test.h"
 
 void insert_sort(int *arr, int l, int r) {
-    
     for (int i = l + 1; i < r; i++) {
         int ind = i;
-        while (l < ind && arr[ind - 1] > arr[ind]) {
+        while (l < ind && arr[ind - 1] CMP arr[ind]) {
             SWAP(arr[ind], arr[ind - 1]);
             ind -= 1;
         }

@@ -12,7 +12,7 @@
 
 #define CMP >
 #define SMALL_DATA_NUM 5000
-#define BIG_DATA_NUM 10000
+#define BIG_DATA_NUM 1000000
 #define SWAP(a, b) {\
     __typeof((a)) __c = (a);\
     (a) = (b);\
@@ -48,7 +48,7 @@ bool check(int *arr, int n) {
     if (check(tmp, n)) {\
         printf("\tOK ");\
     } else {\
-        printf("FAILE ");\
+        printf("\tFAILE ");\
     }\
     long long end = clock();\
     printf("%ditems %lldms done!\n", n, 1000 * (end - start) / CLOCKS_PER_SEC);\
