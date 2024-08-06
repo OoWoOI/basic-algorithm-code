@@ -12,7 +12,7 @@
 
 #define CMP >
 #define SMALL_DATA_NUM 5000
-#define BIG_DATA_NUM 1000000
+#define BIG_DATA_NUM 5000000
 #define SWAP(a, b) {\
     __typeof((a)) __c = (a);\
     (a) = (b);\
