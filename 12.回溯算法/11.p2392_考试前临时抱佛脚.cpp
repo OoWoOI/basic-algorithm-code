@@ -9,31 +9,43 @@
 #include<algorithm>
 using namespace std;
 
-#define MAX_N 20
-int s1[MAX_N + 5], s2[MAX_N + 5], s3[MAX_N + 5], s4[MAX_N + 5];
-int a, b, c, d;
+#define MAX_N 5
+#define MAX_M 20
+#define MAX_NUM 9999999
+int s[MAX_N + 5];
+int t[MAX_N + 5][MAX_M + 5];//存储第I科目的第J道题所需时间
+int ans;
 
-int dfs(int *arr, int l, int r, int sum) {
-    if (l > r) return 0;
-    if (l == r) return arr[l] - sum;
-    return dfs(arr, l + 1, r - 1, arr[r] - arr[l]) + arr[r];
+void dfs(int k, int x, int l, int r) {
+    if (k == s[x]) {
+        ans = min(ans, max(l, r));
+        return ;
+    }
+    //TODO
+    l += t[x][k];
+    dfs(k + 1, x, l, r);
+    l -= t[x][k];
+    //TODO
+    r += t[x][k];
+    dfs(k + 1, x, l, r);
+    r -= t[x][k];
+    return ;
 }
-
 
 int main() {
-    cin >> a >> b >> c >> d;
-    
-    for (int i = 0; i < a; i++) cin >> s1[i];
-    for (int i = 0; i < b; i++) cin >> s2[i];
-    for (int i = 0; i < c; i++) cin >> s3[i];
-    for (int i = 0; i < d; i++) cin >> s4[i];
-
-    sort(s1, s1 + a);
-    sort(s2, s2 + b);
-    sort(s3, s3 + c);
-    sort(s4, s4 + d);
-
-    int ans = dfs(s1, 0, a - 1, 0) + dfs(s2, 0, b - 1, 0) + dfs(s3, 0, c - 1, 0) + dfs(s4, 0, d - 1, 0);
-    cout << ans << endl;
+    for (int i = 0; i < 4; i++) cin >> s[i];
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < s[i]; j++) {
+            cin >> t[i][j];
+        }
+    }
+    int total = 0;
+    for (int i = 0; i < 4; i++) {
+        ans = MAX_NUM;
+        dfs(0, i, 0, 0);
+        total += ans;
+    }
+    cout << total << endl;
     return 0;
 }
+
